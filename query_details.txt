@@ -1,0 +1,174 @@
+contact_links table
+
+CREATE TABLE IF NOT EXISTS contact_links (
+    id SERIAL PRIMARY KEY,
+    link_title VARCHAR(255) NOT NULL,
+    link_url VARCHAR(255) DEFAULT ''
+);
+
+INSERT INTO contact_links (link_title, link_url) VALUES
+('Home', '#'),
+('Wonderla Kochi', '#'),
+('Wonderla Bengaluru', '#'),
+('Wonderla Hyderabad', '#'),
+('Wonderla Bhubaneswar', '#'),
+('Resort', '#'),
+('Park Timings and Tickets', '#'),
+('Offers', '#'),
+('Dress Code', '#'),
+('Getting to wonderla', '#'),
+('Foods & Beverages', '#'),
+('Merchandise', '#'),
+('Tour Operator''s Portal', '#'),
+('Rules and Regulations', '#'),
+('Safety and Hygiene', '#'),
+('Cancellation and Reschedule', '#'),
+('Wonderlab', '#'),
+('Green Initiatives', '#'),
+('CSR Initiatives', '#'),
+('FAQ', '#'),
+('Investor Relations', '#'),
+('Careers', '#'),
+('Tender', '#'),
+('About Us', '#'),
+('Our People', '#'),
+('Contact Us', '#'),
+('Press', '#'),
+('Event', '#'),
+('Special Activities', '#'),
+('Privacy Policy', '#'),
+('Quick Links', '#'),
+('Terms & Conditions', '#');
+
+----------------------------------------------------------------->
+locations table
+
+CREATE TABLE IF NOT EXISTS locations (
+    id SERIAL PRIMARY KEY,
+    label VARCHAR(255) NOT NULL
+);
+
+INSERT INTO locations (id, label) VALUES
+(0, 'Parks'),
+(1, 'Resorts'),
+(2, 'Day Outing');
+
+
+------------------------------------------------->
+
+park table
+
+CREATE TABLE IF NOT EXISTS park(
+    id SERIAL PRIMARY KEY,
+    label VARCHAR(255) NOT NULL
+);
+
+
+INSERT INTO park (id, label) VALUES
+(0, 'Wonderla Kochi'),
+(1, 'Wonderla Bengaluru'),
+(2, 'Wonderla Hydarbad'),
+(3, 'Wonderla Bhubaneswar');
+
+
+------------------------------------------------->
+
+resort table
+
+CREATE TABLE IF NOT EXISTS resort(
+    id SERIAL PRIMARY KEY,
+    label VARCHAR(255) NOT NULL
+);
+
+
+INSERT INTO resort (id, label) VALUES
+(0, 'Wonderla Resort, Bengaluru');
+
+
+------------------------------------------------->
+
+resort table
+
+CREATE TABLE IF NOT EXISTS outing(
+    id SERIAL PRIMARY KEY,
+    label VARCHAR(255) NOT NULL
+);
+
+
+INSERT INTO outing (id, label) VALUES
+(0, 'Bengaluru Resort - Day Outing');
+
+
+
+
+------------------------------------------------->
+
+social_links table
+
+CREATE TABLE IF NOT EXISTS social_links (
+    icon VARCHAR(255) NOT NULL,
+    background VARCHAR(255) NOT NULL,
+    url VARCHAR(2048) NOT NULL
+);
+
+
+INSERT INTO social_links (icon, background, url) VALUES
+('fa-brands fa-facebook-f', '#395593', 'https://www.facebook.com/Wonderla?_gl=1*lpwfoh*_ga*MTk0NTMxMTYxMy4xNzIyNTc4MDQx*_ga_DMYPKC176S*MTcyMzYzMzU4NS41My4xLjE3MjM2MzM4OTIuMTMuMC4w&_ga=2.32395326.1852035800.1723440547-1945311613.1722578041'),
+('fa-brands fa-x-twitter', '#029def', 'https://x.com/Wonder_La?_gl=1*2mzkg5*_ga*MTk0NTMxMTYxMy4xNzIyNTc4MDQx*_ga_DMYPKC176S*MTcyMzYzMzU4NS41My4wLjE3MjM2MzM4NDUuNjAuMC4w&_ga=2.138368688.1852035800.1723440547-1945311613.1722578041'),
+('fa-brands fa-instagram', '#f733a1', 'https://www.instagram.com/wonderla_in/?_gl=1*1t9c3j7*_ga*MTk0NTMxMTYxMy4xNzIyNTc4MDQx*_ga_DMYPKC176S*MTcyMzYzMzU4NS41My4wLjE3MjM2MzM1ODUuNjAuMC4w&_ga=2.71742227.1852035800.1723440547-1945311613.1722578041'),
+('fa-brands fa-youtube', '#f60100', 'https://www.youtube.com/user/wonderlabangalore');
+
+
+------------------------------------------------->
+
+address table
+
+CREATE TABLE IF NOT EXISTS locations (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    primary_contact VARCHAR(50) NOT NULL,
+    secondary_contact VARCHAR(50),
+    third_contact VARCHAR(50)
+);
+
+
+
+INSERT INTO locations (title, email, primary_contact, secondary_contact, third_contact) VALUES
+('Wonderla Kochi', 'mail.cok@wonderla.com', '048 426 84001', '+91 75938 53107', NULL),
+('Wonderla Bengaluru', 'mail.blr@wonderla.com', '080 372 30333', '080 350 73966', NULL),
+('Wonderla Hyderabad', 'mail.hyd@wonderla.com', '084 146 76333', '+91 91000 63636', NULL),
+('Wonderla Bhubaneswar', 'mail.bhu@wonderla.com', '+91 6755 350 200', '+91 67466 40300', '+91 91248 27114'),
+('Wonderla Resort, Bengaluru', 'resort.blr@wonderla.com', '080 350 73993', '+91 99455 00011', NULL);
+
+
+
+------------------------------------------------->
+
+
+
+
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
