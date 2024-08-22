@@ -25,6 +25,16 @@ if (process.env.DATABASE_URL) {
 
 const Client = new Pool(poolConfig);
 
+// Check if the database connection is established
+const checkDBConnection = async () => {
+  try {
+    await Client.connect();
+    console.log('Connected to the database successfully!');
+  } catch (error) {
+    console.error('Database connection error', error.stack);
+  }
+};
+
 // Initialize DB when starting the application
 const dbInit = async () => {
   try {
@@ -34,6 +44,9 @@ const dbInit = async () => {
     throw error.message;
   }
 };
+
+// Run the database connection check
+checkDBConnection();
 
 module.exports = {
   Client,
