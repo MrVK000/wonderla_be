@@ -1,5 +1,5 @@
 
-const { getClientFromPool } = require('./pgConfig')
+const { getClientFromPool } = require('./pgconfig')
 const CONFIG = require('./config')
 const jwt = require('jsonwebtoken');
 // const { sentTokenExpiredErrorResponse, sentTokenMissingErrorResponse } = require('./responseHandler')
