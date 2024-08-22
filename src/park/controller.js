@@ -1,6 +1,6 @@
-const { connectClient } = require('../../utills/utills');
+const { connectClient } = require('../../utills');
 const userModel = require('./model');
-const responsehandler = require('../../utills/responseHandler');
+const responsehandler = require('../../responseHandler');
 
 const get = async (req, res) => {
     try {
