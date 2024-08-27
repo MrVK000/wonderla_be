@@ -15,8 +15,8 @@ if (process.env.DATABASE_URL) {
 } else {
   // Fallback to local configuration for development
   poolConfig = {
-    host: CONFIG.host, //host name
-    user: CONFIG.user, //user name in db
+    host: CONFIG.host, // host name
+    user: CONFIG.user, // user name in db
     port: CONFIG.port, // default one
     password: CONFIG.password, // password for accessing DB
     database: CONFIG.database, // DB name
